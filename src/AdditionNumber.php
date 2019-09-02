@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace Lee;
 
-use InvalidArgumentException;
-
 class AdditionNumber
 {
     public function addTwoNumbers($number1, $number2): int
