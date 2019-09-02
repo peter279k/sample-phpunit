@@ -12,4 +12,11 @@ class AdditionNumber
 
         return $number1 + $number2;
     }
+
+    public function addNumbers(int ...$numbers): int
+    {
+        ValidationNumber::validateNumbers($numbers);
+
+        return array_sum($numbers);
+    }
 }

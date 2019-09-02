@@ -26,12 +26,21 @@ class AdditionNumberTest extends TestCase
         $addition->addTwoNumbers(1.1, 2.2);
     }
 
-    public function testAddTwoStringNumbersCanBeAdded()
+    public function testAddTwoStringNumbersThrowInvalidArgumentException()
     {
         $addition = new AdditionNumber();
 
         $this->expectException(InvalidArgumentException::class);
 
-        $result = $addition->addTwoNumbers('1.1aa', '2.2');
+        $addition->addTwoNumbers('1.1', '2.2');
+    }
+
+    public function testAddNumbersCanBeAdded()
+    {
+        $addition = new AdditionNumber();
+        $result = $addition->addNumbers(1, 2, 3);
+        $expected = 6;
+
+        $this->assertSame($expected, $result);
     }
 }
