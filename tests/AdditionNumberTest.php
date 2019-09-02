@@ -13,6 +13,6 @@ class AdditionNumberTest extends TestCase
         $result = $addition->addTwoNumbers(1, 2);
         $expected = 3;
 
-        $this->assertSame($result, $expected);
+        $this->assertSame($expected, $result);
     }
 }
