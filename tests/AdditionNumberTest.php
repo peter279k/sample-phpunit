@@ -43,4 +43,13 @@ class AdditionNumberTest extends TestCase
 
         $this->assertSame($expected, $result);
     }
+
+    public function testAddArrayNumbersThrowInvalidArgumentException()
+    {
+        $addition = new AdditionNumber();
+
+        $this->expectException(InvalidArgumentException::class);
+
+        $addition->addNumbers([1], [2], [3]);
+    }
 }

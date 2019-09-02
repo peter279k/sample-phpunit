@@ -13,9 +13,9 @@ class AdditionNumber
         return $number1 + $number2;
     }
 
-    public function addNumbers(int ...$numbers): int
+    public function addNumbers(...$numbers): int
     {
-        ValidationNumber::validateNumbers($numbers);
+        ValidationNumber::validateNumbers((array) $numbers);
 
         return array_sum($numbers);
     }
