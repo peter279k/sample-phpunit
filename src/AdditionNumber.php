@@ -1,10 +1,10 @@
 <?php
 
-//Add two numbers class
+namespace Lee;
 
 class AdditionNumber
 {
-    public function addTwoNumbers($number1, $number2)
+    public function addTwoNumbers(int $number1, int $number2)
     {
         return $number1 + $number2;
     }

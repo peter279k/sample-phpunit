@@ -1,16 +1,18 @@
 <?php
 
-//Add two numbers class
-// the version of PHPUnit 4.8 or older.
+namespace Lee\Tests;
 
-class AdditionNumberTest extends PHPUnit_Framework_TestCase
+use Lee\AdditionNumber;
+use PHPUnit\Framework\TestCase;
+
+class AdditionNumberTest extends TestCase
 {
     public function testAddTwoNumbersCanBeAdded()
     {
         $addition = new AdditionNumber();
         $result = $addition->addTwoNumbers(1, 2);
         $expected = 3;
-        
+
         $this->assertSame($result, $expected);
     }
 }
