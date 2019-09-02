@@ -1,6 +1,0 @@
-- name: tests-php7.1
-  command: composer install && composer test
-- name: tests-php7.2
-  command: composer install && composer test
-- name: tests-php7.3
-  command: composer install && composer test
