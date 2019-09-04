@@ -12,4 +12,17 @@ class MultipleNumber
 
         return $number1 * $number2;
     }
+
+    public function multipleNumbers(...$numbers): int
+    {
+        ValidationNumber::validateNumbers((array) $numbers);
+
+        $result = $numbers[0];
+        $numberLength = count($numbers);
+        for ($index=1; $index<$numberLength; $index++) {
+            $result *= $numbers[$index];
+        }
+
+        return $result;
+    }
 }

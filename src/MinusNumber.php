@@ -12,4 +12,17 @@ class MinusNumber
 
         return $number1 - $number2;
     }
+
+    public function minusNumbers(...$numbers): int
+    {
+        ValidationNumber::validateNumbers((array) $numbers);
+
+        $result = $numbers[0];
+        $numberLength = count($numbers);
+        for ($index=1; $index<$numberLength; $index++) {
+            $result -= $numbers[$index];
+        }
+
+        return $result;
+    }
 }
